@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFE5B4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.phone-frame {
+    width: 360px;  /* Chiều rộng cố định */
+    height: 840px; /* Chiều cao cố định */
+    border: 4px solid #333; /* Viền ngoài mô phỏng điện thoại */
+    border-radius: 4px; /* Làm bo tròn các góc */
+    background-color: transparent; /* Màu trong suốt bên ngoài khung */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Đổ bóng cho khung viền */
+    position: relative; /* Để căn chỉnh các nút */
+}
+
+.container {
+    width: 100%;  /* Chiều rộng nội dung bên trong */
+    height: 100%; /* Chiều cao nội dung bên trong */
+    background-color: white; /* Nền trắng cho nội dung bên trong */
+    border-radius: 24px; /* Bo tròn các góc bên trong */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Căn giữa flashcard và các nút */
+    text-align: center;
+    position: relative; /* Để căn chỉnh các nút */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+#cardContainer {
+    flex-grow: 1; /* Tăng kích thước vùng hiển thị flashcard */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Khoảng cách dưới của flashcard */
+}
+
+.card {
+    background-color: #FFB347;
+    border-radius: 10px;
+    width: 100%;  /* Chiều rộng cố định */
+    height: 300px; /* Chiều cao cố định */
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Để căn chỉnh các mặt của flashcard */
+}
+
+.card-front, .card-back {
+    display: none;
+    text-align: center;
+    font-size: 36px;
+}
+
+.card-front.active, .card-back.active {
+    display: block;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 10px; /* Khoảng cách dưới của ô nhập đáp án */
+}
+
+button {
+    background-color: #FF8040;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Khoảng cách trên cho các nút */
+}
+
+button:hover {
+    background-color: #FF4500;
+}
+
+#checkButton {
+    background-color: #4CAF50;
+}
+
+#checkButton:hover {
+    background-color: #45a049;
+}
+
+#resultMessage {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #d9534f; /* Màu đỏ cho thông báo lỗi */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Khoảng cách dưới của nhóm ô nhập đáp án và nút kiểm tra */
+}
+
+.bottom-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Khoảng cách giữa các nút trong bottom-buttons */
+}
+
+#nextButton {
+    width: 100%;
+    margin-top: auto; /* Đẩy nút xuống dưới cùng */
+}
+
+#loadButton {
+    width: 100%;
+    margin-bottom: 10px; /* Khoảng cách dưới nút tải dữ liệu */
+}

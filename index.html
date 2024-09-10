@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Học Từ Vựng Tiếng Trung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="container">
+            <h1>Flashcard Học Từ Vựng Tiếng Trung</h1>
+            <input type="file" id="fileInput" accept=".xlsx" />
+            <button id="loadButton">Tải dữ liệu</button>
+            
+            <div id="cardContainer">
+                <div id="flashcard" class="card">
+                    <div class="card-front">
+                        <p id="stt"></p>
+                        <p id="hanzi"></p>
+                        <p id="pinyin"></p>
+                    </div>
+                    <div class="card-back">
+                        <p id="hanViet"></p>
+                        <p id="viet"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="answerInput" placeholder="Nhập nghĩa Hán Việt" />
+                <button id="checkButton">Kiểm tra đáp án</button>
+            </div>
+
+            <div class="bottom-buttons">
+                <button id="nextButton">Từ tiếp theo</button>
+            </div>
+            
+            <p id="resultMessage"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
